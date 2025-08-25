@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bogdan Panow – Portfolio</title>
+  <meta name="description" content="Portfolio of Bogdan Panow – C++ / Unreal Engine Engineer" />
+  <style>
+    :root{
+      --bg: #f7f7f8; --card:#ffffff; --ink:#18181b; --muted:#52525b; --line:#e4e4e7; --accent:#2563eb;
+      --radius: 18px; --shadow: 0 6px 22px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--ink); background:linear-gradient(180deg,#fbfbfc, var(--bg));}
+    a{color:inherit}
+    .container{max-width:1100px; margin:0 auto; padding:24px;}
+    .section{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px; margin:24px auto;}
+    .section-title{font-size:28px; font-weight:700; text-align:center; margin:0 0 20px}
+
+    /* About */
+    .about{display:grid; place-items:center; gap:18px; text-align:center}
+    .avatar{width:150px; height:150px; border-radius:50%; overflow:hidden; border:3px solid #ef4444}
+    .avatar img{width:100%; height:100%; object-fit:cover}
+    .name{font-size:32px; font-weight:800}
+    .role{color:var(--muted); margin-top:4px}
+    .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:12px}
+    .btn{padding:10px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none}
+    .btn:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+
+    /* Experience */
+    .exp-card{border:1px solid var(--line); border-radius:var(--radius); padding:20px; display:grid; gap:20px;}
+    .exp-header{display:flex; align-items:center; gap:14px}
+    .logo{width:56px; height:56px; border-radius:10px; overflow:hidden; border:2px solid #ef4444}
+    .logo img{width:100%; height:100%; object-fit:cover}
+    .company{font-size:22px; font-weight:700}
+
+    .project{display:grid; grid-template-columns:1fr; gap:14px; margin-left:0}
+    .thumb{aspect-ratio:16/9; width:100%; border-radius:14px; overflow:hidden; border:2px solid #ef4444}
+    .thumb img{width:100%; height:100%; object-fit:cover; transition:transform .25s}
+    .thumb:hover img{transform:scale(1.03)}
+    .project-title{font-size:19px; font-weight:700}
+    .summary{color:var(--muted)}
+
+    /* Show more using native details/summary */
+    details{border-radius:12px}
+    summary{cursor:pointer; color:var(--accent); text-decoration:underline; list-style:none}
+    summary::-webkit-details-marker{display:none}
+    details[open]{animation:reveal .2s ease}
+    @keyframes reveal{from{opacity:.7} to{opacity:1}}
+
+    /* Responsive */
+    @media (min-width: 860px){
+      .project{grid-template-columns:340px 1fr; align-items:start}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- ABOUT -->
+    <section class="section about">
+      <div class="avatar">
+        <img src="images/profile.jpg" alt="Bogdan Panov" />
+      </div>
+      <h1 class="name">Bogdan Panov</h1>
+      <p class="role">C++ / Unreal Engine Engineer</p>
+      <p style="max-width:760px; line-height:1.6; color:var(--muted)">
+        Passionate Gameplay Programmer with 3+ years of experience in GameDev industry. Has been working on AAA and AA games for
+PC, Consoles and mobile platforms using Unreal Engine & Unity. Skilled in implementing multiplayer mechanics, AI, Animation
+systems, and gameplay features that elevate player engagement. Adept at working collaboratively with designers, artists, and
+other developers to create seamless gaming experiences.
+      </p>
+      <nav class="links" aria-label="Primary">
+        <a class="btn" href="mailto:panow.bogdan@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/bogdan-panov/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/Goggiafk" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="#" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section">
+      <h2 class="section-title">Projects & Contribution</h2>
+
+      <!-- Company 1 -->
+      <article class="exp-card">
+        <header class="exp-header">
+          <a class="logo" href="https://www.prismstudio.com/" target="_blank" rel="Prismstudio">
+            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFAAAiedBZRzw/company-logo_200_200/B4DZin7u2QG8AM-/0/1755164110719/prism_studio_limited_logo?e=1758758400&v=beta&t=vbxbumBkyxaqdAvmZdl2hlnt-dzprI1MMiZk8IcZL5k" alt="Prismstudio" />
+          </a>
+          <a class="company" href="https://www.prismstudio.com/" target="_blank" rel="noreferrer">Prism Studio</a>
+        </header>
+
+        <div class="project">
+          <a class="thumb" href="https://store.steampowered.com/app/2707850/Heptic_Arena/" target="_blank" rel="Prismstudio">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2707850/fb3e47e3002f91eae0d96ba80c79e29ac7f377b2/header.jpg?t=1755523775" alt="Heptic Arena" />
+          </a>
+          <div>
+            <a class="project-title" href="https://store.steampowered.com/app/2707850/Heptic_Arena/" target="_blank" rel="noreferrer">Heptic Arena</a>
+            <p class="summary">City‑scale CFD‑lite wind visualization from uploaded 3D models.</p>
+       
+              <ul>
+                <li>Integrated Unreal Engine's Gameplay Ability System (GAS) and Modular Game Features to streamline multiplayer
+mechanics and enhance scalability</li>
+                <li>Developed enemies AI agents using Behavior Trees, enhancing the AI dynamics and interactions</li>
+                <li>Extensive work with replication for a multiplayer shooter with teams HepticArena</li>
+              </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Company 2 -->
+      <article class="exp-card">
+        <header class="exp-header">
+          <a class="logo" href="https://chronospace.com/" target="_blank" rel="Chronospace">
+            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEz52VOPqK2Dw/company-logo_200_200/company-logo_200_200/0/1680280123096/chronospace_logo?e=1758758400&v=beta&t=OenCCXCxLrPrJMtnE8w2Xlv_M_BLqJ5BEVp67719r3Y" alt="Chronospace" />
+          </a>
+          <a class="company" href="https://chronospace.com/" target="_blank" rel="Aviators">Chronospace</a>
+        </header>
+
+        <div class="project">
+          <a class="thumb" href="https://store.steampowered.com/app/2626910/Aviators/" target="_blank" rel="Aviators">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2626910/header.jpg?t=1727877766" alt="Aviators" />
+          </a>
+          <div>
+            <a class="project-title" href="https://store.steampowered.com/app/2626910/Aviators/" target="_blank" rel="Aviators">Aviators</a>
+            <p class="summary">C++ gameplay & animation programming for character systems.</p>
+              <ul>
+                <li>Built game mechanics and UI using Blueprints and C++</li>
+                <li>Worked extensively with Gamepad controls for intuitive user experiences</li>
+              </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="container" style="text-align:center; color:var(--muted); padding-bottom:32px">
+      © <span id="year"></span> Bogdan Panov. All rights are not reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
